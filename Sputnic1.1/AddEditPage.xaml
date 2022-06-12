@@ -1,0 +1,120 @@
+﻿<Page x:Class="Sputnic1._1.AddEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Sputnic1._1"
+      mc:Ignorable="d" 
+      Title="Add/Edit" Height="700" Width="600"
+       >
+    <Page.Resources>
+
+
+
+        <Style TargetType="TextBox">
+            <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="Width" Value="200"></Setter>
+            <Setter Property="Height" Value="30"></Setter>
+            <Setter Property="Background" Value="{x:Null}"></Setter>
+            <Setter Property="Foreground" Value="#FF73FFDF"></Setter>
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FFF1F1F1" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="ToolTip">
+            <Setter Property="FontSize" Value="18"></Setter>
+        </Style>
+
+
+
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+            <Setter Property="FontSize" Value="24"></Setter>
+            <Setter Property="Foreground" Value="#FF73FFDF"></Setter>
+            <Setter Property="Cursor" Value="Hand"></Setter>
+            <Setter Property="Width" Value="200"></Setter>
+            <Setter Property="Height" Value="50"></Setter>
+            <Setter Property="BorderBrush">
+
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF3AE6CF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="#FF1C314B"></Setter>
+        </Style>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+            <Setter Property="FontSize" Value="24"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="Foreground" Value="#FF73FFDF"></Setter>
+        </Style>
+
+       
+
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform ScaleY="1" ScaleX="1"/>
+                <SkewTransform AngleY="0" AngleX="0"/>
+                <RotateTransform Angle="0"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <StackPanel HorizontalAlignment="Center">
+            <Label Content="Sputnic.exe"  Margin="0 0 0 020" Height="125" FontSize="100" 
+                   HorizontalAlignment="Center" 
+                   FontFamily="Century Gothic" Background="{x:Null}" >
+              
+                <Label.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF73FFDF" Offset="1"/>
+                    </LinearGradientBrush>
+              
+                </Label.Foreground>
+                
+            </Label>
+            
+            <TextBlock Text="Name" Margin="10" ></TextBlock>
+
+            <TextBox Text="{Binding Name}"></TextBox>
+
+            <TextBlock Text="Last Name" Margin="10"></TextBlock>
+
+            <TextBox Text="{Binding LastName}"></TextBox>
+
+            <TextBlock Text="Patronymic" Margin="10"></TextBlock>
+
+            <TextBox Text="{Binding Patronymic}"></TextBox>
+ 
+            <TextBlock Text="Number Telephone" Margin="10"></TextBlock>
+
+            <TextBox Text="{Binding Number_Telephone}"></TextBox>
+
+            <TextBlock Text="Login" Margin="10"></TextBlock>
+
+            <TextBox Text="{Binding Login}"></TextBox>
+
+            <Button Content="Save" Margin="0 020 0 0 " 
+                    Name="btbSave" Click="btbSave_Click"></Button>
+        </StackPanel>
+
+
+
+
+
+    </Grid>
+</Page>
